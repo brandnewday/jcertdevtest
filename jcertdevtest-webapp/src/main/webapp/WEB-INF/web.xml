@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
+  <display-name>Archetype Created Web Application</display-name>
+  <context-param>
+    <param-name>filePath</param-name>
+    <param-value>/home/ken/dev/jcertdevtest/root/db-1x1.db</param-value>
+  </context-param>
+  <listener>
+    <listener-class>jcertdevtest.webapp.MainContextHandler</listener-class>
+  </listener>
+  <servlet>
+    <servlet-name>MainServlet</servlet-name>
+    <servlet-class>jcertdevtest.webapp.MainServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>BookingServlet</servlet-name>
+    <servlet-class>jcertdevtest.webapp.BookingServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>MainServlet</servlet-name>
+    <url-pattern>/Main</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>BookingServlet</servlet-name>
+    <url-pattern>/Booking</url-pattern>
+  </servlet-mapping>
+  <welcome-file-list>
+    <welcome-file>Main</welcome-file>
+  </welcome-file-list>
+</web-app>
